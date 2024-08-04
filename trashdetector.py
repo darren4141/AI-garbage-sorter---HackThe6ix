@@ -73,9 +73,11 @@ while True:
           if recentGuess == "recycle":
             print("Success")
             score += 150
+            esp32.write('C'.encode('utf-8'))
           else:
             print("Wrong Bin")
             score -= 150
+            esp32.write('D'.encode('utf-8'))
         else:
           print("Trash")
           print(time.time() - prevtime)
@@ -85,9 +87,11 @@ while True:
           if recentGuess == "garbage":
             print("Success")
             score += 100
+            esp32.write('C'.encode('utf-8'))
           else:
             print("Wrong bin")
             score -= 200
+            esp32.write('D'.encode('utf-8'))
   cv.imshow('my webcam', img)
   if cv.waitKey(1) == 27: 
     break 
