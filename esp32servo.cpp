@@ -2,8 +2,6 @@
 
 Servo myservo;
 
-int pos = 0;
-
 void setup() {
   myservo.attach(23);
   myservo.write(0);
